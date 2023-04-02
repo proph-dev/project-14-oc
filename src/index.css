@@ -3,3 +3,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: #005eb6;
+}
+
+header {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
