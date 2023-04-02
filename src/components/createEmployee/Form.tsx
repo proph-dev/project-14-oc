@@ -17,6 +17,32 @@ export const Form = () => {
 
             <label htmlFor="">Start Date</label>
             <input type="date" />
+
+            <fieldset>
+                <legend>Address</legend>
+                <label htmlFor="">Street</label>
+                <input type="text" />
+
+                <label htmlFor="">City</label>
+                <input type="text" />
+
+                <label htmlFor="">State</label>
+                <select name="state" id="state">
+                    <option value="AL">
+                        Alabama
+                    </option>
+                </select>
+
+                <label htmlFor="">Zip Code</label>
+                <input type="number" />
+            </fieldset>
+
+            <label htmlFor="">Department</label>
+            <select name="" id="">
+                <option value="">Sales</option>
+            </select>
+
+            <input type="submit" value="Save" />
         </form>
     )
 }
