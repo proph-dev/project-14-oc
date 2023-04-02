@@ -1,9 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Form from '../components/createEmployee/Form';
 
 function Home() {
   return (
     <div>
-      Page d'accueil
+      <header>
+        <h1>HRnet</h1>
+        <Link to="/">View Current Employees</Link>
+      </header>
+
+      <Form />
     </div>
   );
 }
