@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
+const Home = lazy(() => import('../pages/Home'))
+const NotFound = lazy(() => import('../pages/NotFound'))
 
 export const RoutesPage = () => {
     return (
         <BrowserRouter>
         <main>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<>...</>}>
+                <Routes>
+                    <Route path="/" element={
+                            <Home />
+                    } />
+
+                    <Route path="*" element={
+                            <NotFound />
+                    } />
+                </Routes>
+            </Suspense>
         </main>
         </BrowserRouter>
     )
