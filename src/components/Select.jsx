@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 
-export const Date = () => {
+export const ReactSelect = () => {
     const [selectedOption, setSelectedOption] = useState(null);
 
     const options = [
@@ -24,5 +24,3 @@ export const Date = () => {
         </div>
     );
 }
-
-export default Date;

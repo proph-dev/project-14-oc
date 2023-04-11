@@ -40,5 +40,3 @@ export const DataTables = () => {
         </div>
     );
 }
-
-export default DataTables;

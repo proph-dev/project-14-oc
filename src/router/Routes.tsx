@@ -11,11 +11,11 @@ export const RoutesPage = () => {
             <Suspense fallback={<>...</>}>
                 <Routes>
                     <Route path="/" element={
-                            <Home />
+                        <Home />
                     } />
 
                     <Route path="*" element={
-                            <NotFound />
+                        <NotFound />
                     } />
                 </Routes>
             </Suspense>

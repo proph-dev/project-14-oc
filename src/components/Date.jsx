@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DateTimePicker from 'react-datetime-picker';
 
-export const Date = () => {
+export const Dates = () => {
     const [date, setDate] = useState(new Date());
 
     function onChange(date) {
@@ -10,9 +10,7 @@ export const Date = () => {
 
     return (
         <div>
-        <DateTimePicker onChange={onChange} value={date} />
+            <DateTimePicker onChange={onChange} value={date} />
         </div>
     );
 }
-
-export default Date;
