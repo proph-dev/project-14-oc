@@ -36,3 +36,15 @@ form input[type="submit"] {
     margin-top: 1rem;
     cursor: pointer;
 }
+
+
+/* Select */
+form .selectCountry {
+    margin-bottom: 1rem;
+}
+
+
+/* Date */
+form .dateTime .react-datetime-picker__inputGroup__input {
+    padding: .5rem 2rem;
+}

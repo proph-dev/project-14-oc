@@ -1,4 +1,5 @@
-import React from "react";
+import { ReactSelect } from './Select';
+import { ReactDatePicker } from './Date';
 import './form.css';
 
 export const Form = () => {
@@ -13,10 +14,10 @@ export const Form = () => {
             <input type="text" />
 
             <label htmlFor="">Date of Birth</label>
-            <input type="date" />
+            <ReactDatePicker />
 
             <label htmlFor="">Start Date</label>
-            <input type="date" />
+            <ReactDatePicker />
 
             <fieldset>
                 <legend>Address</legend>
@@ -27,11 +28,7 @@ export const Form = () => {
                 <input type="text" />
 
                 <label htmlFor="">State</label>
-                <select name="state" id="state">
-                    <option value="AL">
-                        Alabama
-                    </option>
-                </select>
+                <ReactSelect />
 
                 <label htmlFor="">Zip Code</label>
                 <input type="number" />
