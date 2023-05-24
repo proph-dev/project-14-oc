@@ -4,8 +4,8 @@ interface ModalProps {
     children: ReactNode;
     onClose: () => void;
     showModal: boolean;
-    modalClass: string;
-    blockerClass: string;
+    modalClass?: string;
+    blockerClass?: string;
     showClose?: boolean;
     closeText?: string;
     closeClass?: string;
@@ -17,13 +17,13 @@ export const Modal = ({ children, onClose, showModal, modalClass, blockerClass, 
     const modalRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const handleOutsideClick = (event: globalThis.MouseEvent) => {
+        const handleOutsideClick = (event: MouseEvent) => {
             if (clickClose && modalRef.current && !modalRef.current.contains(event.target as Node)) {
                 onClose();
             }
         };
 
-        const handleEscapeKey = (event: globalThis.KeyboardEvent) => {
+        const handleEscapeKey = (event: KeyboardEvent) => {
             if (escapeClose && event.key === "Escape") {
               onClose();
             }
@@ -46,7 +46,7 @@ export const Modal = ({ children, onClose, showModal, modalClass, blockerClass, 
     }
 
     return (
-        <div className={ blockerClass }>
+        <div className={`${blockerClass} modal`}>
             <div ref={modalRef} className={ modalClass }>
                 {children}
 

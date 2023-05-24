@@ -119,10 +119,9 @@ export const Form = () => {
             <Modal
                 onClose={ handleCloseModal }
                 showModal={ showModal }
-                blockerClass="modal"
                 modalClass="modalContent"
                 showClose
-                closeText="Fermer"
+                closeText='Fermer'
                 closeClass="close"
                 escapeClose
             >
