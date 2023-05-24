@@ -116,7 +116,16 @@ export const Form = () => {
             </form>
             
 
-            <Modal onClose={ handleCloseModal } showModal={ showModal }>
+            <Modal
+                onClose={ handleCloseModal }
+                showModal={ showModal }
+                blockerClass="modal"
+                modalClass="modalContent"
+                showClose
+                closeText="Fermer"
+                closeClass="close"
+                escapeClose
+            >
                 <p>Employee create !</p>
             </Modal>
         </>
