@@ -56,7 +56,7 @@ export const Form = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        dispatch(setEmployeeData({ ...formValues }));
+        dispatch(setEmployeeData({ ...formValues, department: formValues.department?.label, state: formValues.state?.label}));
       
         setFormValues(initialValues);
         setShowModal(true);

@@ -9,6 +9,12 @@ interface ReactDatePickerProps {
 
 export const ReactDatePicker = (props: ReactDatePickerProps) => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+    
+    const minDate = new Date();
+    minDate.setFullYear(minDate.getFullYear() - 120);
+
+    const maxDate = new Date();
+    maxDate.setFullYear(maxDate.getFullYear() - 18);
 
     const handleDateChange = (date: Date) => {
         setSelectedDate(date);
@@ -21,6 +27,8 @@ export const ReactDatePicker = (props: ReactDatePickerProps) => {
                 selected={ selectedDate }
                 onChange={handleDateChange}
                 dateFormat="dd/MM/yyyy"
+                minDate={minDate}
+                maxDate={maxDate}
             />
         </div>
     );
