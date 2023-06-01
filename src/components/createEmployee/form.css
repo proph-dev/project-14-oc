@@ -48,3 +48,11 @@ form .selectCountry {
 form .dateTime .react-datetime-picker__inputGroup__input {
     padding: .5rem 2rem;
 }
+
+
+
+@media(max-width: 980px) {
+    form {
+        width: 90%;
+    }
+}

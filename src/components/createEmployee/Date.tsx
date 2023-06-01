@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 interface ReactDatePickerProps {
     onChange?: (date: Date) => void;
     selected: Date | null;
+    maxDateLimit: number;
 }
 
 export const ReactDatePicker = (props: ReactDatePickerProps) => {
@@ -14,7 +15,7 @@ export const ReactDatePicker = (props: ReactDatePickerProps) => {
     minDate.setFullYear(minDate.getFullYear() - 120);
 
     const maxDate = new Date();
-    maxDate.setFullYear(maxDate.getFullYear() - 18);
+    maxDate.setFullYear(maxDate.getFullYear() - props.maxDateLimit);
 
     const handleDateChange = (date: Date) => {
         setSelectedDate(date);

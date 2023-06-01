@@ -84,6 +84,7 @@ export const Form = () => {
                     onChange={(date: Date | null) =>
                         setFormValues({ ...formValues, birthDate: date })
                     }
+                    maxDateLimit={18}
                 />
 
                 <label htmlFor="">Start Date</label>
@@ -92,6 +93,7 @@ export const Form = () => {
                     onChange={(date: Date | null) =>
                         setFormValues({ ...formValues, startDate: date })
                     }
+                    maxDateLimit={0}
                 />
 
                 <fieldset>
