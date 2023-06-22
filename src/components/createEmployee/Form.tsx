@@ -3,7 +3,7 @@ import { ReactSelect } from './Select';
 import { ReactDatePicker } from './Date';
 import { useDispatch } from 'react-redux';
 import { setEmployeeData } from '../../redux/reducer';
-import { Modal } from '../Modal';
+import { Modal } from 'lib-modal/lib/modal';
 import './form.css';
 
 interface State {
